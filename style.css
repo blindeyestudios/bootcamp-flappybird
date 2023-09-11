@@ -1,0 +1,202 @@
+body {
+    display: flex;
+}
+
+.game-container {
+    width: 500px;
+    height: 730px;
+    position: absolute;
+    left: 80px;
+}
+
+.difficulty-btn-container {
+    position: absolute;
+    top: 90%;
+    z-index: 1000;
+    width: 80%;
+    left: 10%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.difficulty-btn {
+    font-size: 2rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: darkseagreen;
+    color: chocolate;
+    margin: 10px;
+}
+
+.difficulty-btn-selected {
+    background-color: seagreen;
+    color: coral;
+}
+
+.start-btn {
+    position: absolute; 
+    left: 20%; 
+    top: 30%; 
+    z-index: 1000;
+    height: 100px;
+    width: 60%;
+    font-size: 4.5rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: darkseagreen;
+    color: chocolate;
+}
+
+.start-btn:hover {
+    background-color: seagreen;
+    color: coral;
+}
+
+.game-over-card {
+    position: absolute; 
+    left: 15%; 
+    top: 20%; 
+    z-index: 1001;
+    height: 400px;
+    width: 70%;
+    background-color:rgb(172, 123, 197);
+    border: 5px solid black;
+    display: none;
+}
+
+.game-over-text {
+    position: relative;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.score-text {
+    position: relative;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.try-again-btn {
+    margin: 0;
+    position: relative;
+    width: 60%;
+    left: 20%;
+    height: 40px;
+    font-size: 1.5rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: darkseagreen;
+    color: chocolate;
+    border: 3px solid black;
+}
+
+.try-again-btn:hover {
+    background-color: seagreen;
+    color: coral;
+}
+
+.border-left {
+    width: 80px;
+    height: 790px;
+    position:  absolute;
+    background-color: white;
+    z-index: +2;
+}
+
+.border-right {
+    width: 80px;
+    height: 790px;
+    position: absolute;
+    background-color: white;
+    z-index: +2;
+    left: 580px;
+}
+
+.border-top {
+    width: 660px;
+    height: 50px;
+    position:  absolute;
+    background-color: white;
+    z-index: +2;
+    top: -50px;
+}
+
+.sky {
+    background-image: url('images/fb-game-background.png');
+    width: 500px;
+    height: 580px;
+    position: absolute;
+}
+
+.ground {
+    background-image: url('images/bottom-background.png');
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    top: 580px;
+    z-index: +1;
+}
+
+.bird {
+    background-image: url('images/flappy-bird.png');
+    position: absolute;
+    width: 60px;
+    height: 45px;
+    left: 220px;
+    bottom: 100px;
+}
+
+.obstacle {
+    background-image: url('images/flappybird-pipe.png');
+    width: 60px;
+    height: 300px;
+    position: absolute;
+}
+
+/*
+* TALK ABOUT TRANSFORMS HERE
+*/
+.topObstacle {
+    background-image: url('images/flappybird-pipe.png');
+    transform: rotate(180deg);
+    width: 60px;
+    height: 300px;
+    position: absolute;
+}
+
+@keyframes slideright {
+    from {
+        background-position: 10000%;
+    }
+    to {
+        background-position: 0%;
+    }
+  }
+  
+  @-webkit-keyframes slideright {
+    from {
+        background-position: 10000%;
+    }
+    to {
+        background-position: 0%;
+    }
+  }
+
+  .ground-container {
+      height: 150px;
+      width: 580px;
+      left: 80px;
+      position:  absolute;
+  }
+  
+  .ground-moving {
+    position: absolute;
+    top: 580px;
+    height: 150px;
+    background-image: url('images/bottom-background.png');
+    background-repeat: repeat-x;
+    animation: slideright 100s infinite linear;
+    -webkit-animation: slideright 100s infinite linear;
+    width: 100%;
+    z-index: +1;
+  }
+

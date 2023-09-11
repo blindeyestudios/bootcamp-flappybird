@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Flappy Bird</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="app.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="border-left"></div>
+        <div class="game-container">
+            <button
+                class="start-btn"
+                onclick="startGame()"
+            >
+                START
+            </button>
+            <div class="difficulty-btn-container">
+                <button class="difficulty-btn" id="easy-btn" onclick="setDifficulty('easy')">EASY</button>
+                <button class="difficulty-btn difficulty-btn-selected" id="normal-btn" onclick="setDifficulty('normal')">NORMAL</button>
+                <button class="difficulty-btn" id="hard-btn" onclick="setDifficulty('hard')">HARD</button>
+            </div>
+            <div class="game-over-card">
+                <p class="game-over-text">GAME OVER!</p>
+                <p class="score-text">SCORE:</p>
+                <p class="score-text" id="score"></p>
+                <button class="try-again-btn" onclick="tryAgain()">TRY AGAIN</button>
+            </div>
+            <div class="border-top"></div>
+            <div class="sky">
+                <div class="bird"></div>
+            </div>
+        </div>
+        <div class="ground-container">
+            <div class="ground-moving"></div>
+        </div>
+        <div class="border-right"></div>
+    </body>
+</html>
