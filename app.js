@@ -73,7 +73,7 @@ function startGame() {
     /**
      * A function to update bird position from gravity
      */
-    function applyGravity() {
+    let applyGravity = () => {
         // Adjust the bird's position via gravity variable
         birdBottom -= gravity;
         bird.style.bottom = birdBottom + "px";
